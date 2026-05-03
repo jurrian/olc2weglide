@@ -18,7 +18,11 @@ Sentry.init({
   release: packageJson.version,
   integrations: [
     Sentry.browserTracingIntegration({ router }),
-    Sentry.replayIntegration(),
+    Sentry.replayIntegration({
+      maskAllText: false,
+      maskAllInputs: false,
+      blockAllMedia: false,
+    }),
     Sentry.feedbackIntegration({
       colorScheme: "system",
       messagePlaceholder: "Please describe what you were doing when this error occurred. INCLUDE A SCREENSHOT of the error if possible. Unfortunately, I cannot respond to all feedback.",
