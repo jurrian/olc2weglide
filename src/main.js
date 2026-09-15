@@ -30,7 +30,7 @@ Sentry.init({
   ],
   tracesSampleRate: 0.01,
   tracePropagationTargets: ["localhost", /^https:\/\/olc2weglide\.nl\/api/],
-  replaysSessionSampleRate: 0.01,
+  replaysSessionSampleRate: 0.0,
   replaysOnErrorSampleRate: 1.0,
 });
 
